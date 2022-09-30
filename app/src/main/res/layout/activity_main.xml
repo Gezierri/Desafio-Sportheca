@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:paddingTop="30dp"
+    android:background="@drawable/channels4_profile"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_default"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="#FFFF"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/tv_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="Usuario test"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="Alemanha"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_atacante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="Usuario test"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_default"
+            android:src="#2B0246"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_percentual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:capitalize="none"
+            android:gravity="center"
+
+            android:text="45.333"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+            app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+            app:layout_constraintStart_toStartOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+        <TextView
+            android:id="@+id/tv_copa_vencidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:gravity="start"
+            android:text="@string/copas_do_mundo_vencidas"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/pb_copas_vencidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minWidth="300dp"
+            android:progress="0"
+            android:indeterminate="false"
+            app:showAnimationBehavior="outward"
+            app:indicatorDirectionLinear="startToEnd"
+            android:progressBackgroundTint="@color/material_on_surface_stroke"
+            android:progressTint="@color/purple_500"
+            app:layout_constraintStart_toStartOf="@+id/tv_copa_vencidas"
+            app:layout_constraintTop_toBottomOf="@+id/tv_copa_vencidas"
+            app:trackCornerRadius="100dp"
+            app:trackThickness="30dp" />
+
+        <TextView
+            android:id="@+id/tv_copa_vencidas_pla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_small"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_copas_vencidas"
+            app:layout_constraintStart_toStartOf="@+id/pb_copas_vencidas"
+            app:layout_constraintTop_toTopOf="@+id/pb_copas_vencidas" />
+
+        <TextView
+            android:id="@+id/tv_copa_vencidas_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_copas_vencidas"
+            app:layout_constraintStart_toEndOf="@+id/pb_copas_vencidas"
+            app:layout_constraintTop_toTopOf="@+id/pb_copas_vencidas" />
+
+        <TextView
+            android:id="@+id/tv_copas_disputadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="start"
+            android:text="Copas do Mundo disputadas"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/pb_copas_vencidas"
+            app:layout_constraintTop_toBottomOf="@+id/pb_copas_vencidas" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/pb_copas_disputadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:minWidth="300dp"
+            android:progress="0"
+            android:progressBackgroundTint="@color/material_on_surface_stroke"
+            android:progressTint="@color/purple_500"
+            app:layout_constraintStart_toStartOf="@+id/tv_copas_disputadas"
+            app:layout_constraintTop_toBottomOf="@+id/tv_copas_disputadas"
+            app:trackCornerRadius="100dp"
+            app:trackThickness="30dp" />
+
+
+        <TextView
+            android:id="@+id/tv_copas_disputadas_pla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_copas_disputadas"
+            app:layout_constraintStart_toStartOf="@+id/tv_copas_disputadas"
+            app:layout_constraintTop_toTopOf="@+id/pb_copas_disputadas" />
+
+        <TextView
+            android:id="@+id/tv_copas_disputadas_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pb_copas_disputadas"
+            app:layout_constraintStart_toEndOf="@+id/pb_copas_disputadas"
+            app:layout_constraintTop_toTopOf="@+id/pb_copas_disputadas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
